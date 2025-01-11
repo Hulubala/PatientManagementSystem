@@ -21,7 +21,6 @@ public class Nurse extends Person {
         return "Nurse ID: " + getId() + ", Name: " + getName() + ", Contact: " + getContact() + ", Role: " + role;
     }
 
-    // Display method
     public void displayNurseInfo() {
         System.out.println("Nurse Details:");
         System.out.println("ID: " + getId());

@@ -60,7 +60,7 @@ public class PatientManagementSystem {
             scanner.nextLine(); 
 
             switch (choice) {
-                case 1: // Doctor Login
+                case 1: 
                     String doctorID = loginUser(scanner, doctorCredentials);
                     if (doctorID != null) {
                         doctorMenu(scanner, appointments, medicalRecords, patients, doctors, nurses, bills);
@@ -69,7 +69,7 @@ public class PatientManagementSystem {
                     }
                     break;
             
-                case 2: // Nurse Login
+                case 2: 
                     String nurseID = loginUser(scanner, nurseCredentials);
                     if (nurseID != null) {
                         nurseMenu(scanner, patients);
@@ -78,7 +78,7 @@ public class PatientManagementSystem {
                     }
                     break;
             
-                case 3: // Patient Login
+                case 3: 
                     String patientID = loginUser(scanner, patientCredentials);
                     if (patientID != null) {
                         patientMenu(scanner, medicalRecords, patientID);
@@ -87,7 +87,7 @@ public class PatientManagementSystem {
                     }
                     break;
             
-                case 4: // Admin Login
+                case 4:
                     String adminID = loginUser(scanner, adminCredentials);
                     if (adminID != null) {
                         adminMenu(scanner, patients, doctors, nurses, medicalRecords, appointments, bills);
@@ -96,7 +96,7 @@ public class PatientManagementSystem {
                     }
                     break;
             
-                case 5: // Exit
+                case 5: 
                     System.out.println("Exiting the Hospital Management System. Goodbye!");
                     break;
             
@@ -283,7 +283,7 @@ public class PatientManagementSystem {
             scanner.nextLine(); 
 
             switch (choice) {
-                case 1: // Register New Patient
+                case 1: 
                     System.out.println("\n--- Register New Patient ---");
                     System.out.print("Enter Patient ID: ");
                     String patientID = scanner.nextLine();
@@ -302,7 +302,7 @@ public class PatientManagementSystem {
                     System.out.println("Patient Registered Successfully!");
                     break;
 
-                case 2: // Add New Doctor
+                case 2: 
                     System.out.println("\n--- Add New Doctor ---");
                     System.out.print("Enter Doctor ID: ");
                     String doctorID = scanner.nextLine();
@@ -316,7 +316,7 @@ public class PatientManagementSystem {
                     System.out.println("Doctor Added Successfully!");
                     break;
 
-                case 3: // Add New Nurse
+                case 3:
                     System.out.println("\n--- Add New Nurse ---");
                     System.out.print("Enter Nurse ID: ");
                     String nurseID = scanner.nextLine();
@@ -330,7 +330,7 @@ public class PatientManagementSystem {
                     System.out.println("Nurse Added Successfully!");
                     break;
 
-                case 4: // View All Data
+                case 4:
                     System.out.println("\n--- View All Data ---");
                     System.out.println("Patients:");
                     for (Patient patient : patients) {
@@ -346,7 +346,7 @@ public class PatientManagementSystem {
                     }
                     break;
 
-                case 5: // Add Appointment
+                case 5: 
                     System.out.println("\n--- Add Appointment ---");
                     System.out.print("Enter Appointment ID: ");
                     String appointmentID = scanner.nextLine();
@@ -363,7 +363,7 @@ public class PatientManagementSystem {
                     System.out.println("Appointment Added Successfully!");
                     break;
 
-                case 6: // View Appointments
+                case 6: 
                     System.out.println("\n--- View Appointments ---");
                     if (appointments.isEmpty()) {
                         System.out.println("No appointments scheduled.");
@@ -374,7 +374,7 @@ public class PatientManagementSystem {
                     }
                     break;
 
-                case 7: // Update Billing Status
+                case 7: 
                     System.out.println("\n--- Update Billing Status ---");
                     System.out.print("Enter Bill ID: ");
                     String billID = scanner.nextLine();
@@ -389,7 +389,7 @@ public class PatientManagementSystem {
                     System.out.println("Billing Status Updated Successfully!");
                     break;
 
-                case 8: // View Bills
+                case 8: 
                     System.out.println("\n--- View Bills ---");
                     if (bills.isEmpty()) {
                         System.out.println("No bills recorded.");
@@ -404,7 +404,7 @@ public class PatientManagementSystem {
                     }
                     break;
 
-                case 9: // Search Patient by ID
+                case 9: 
                     System.out.println("\n--- Search Patient by ID ---");
                     System.out.print("Enter Patient ID: ");
                     String searchID = scanner.nextLine();
@@ -421,7 +421,7 @@ public class PatientManagementSystem {
                     }
                     break;
 
-                case 10: // Sort and View Patients by Name
+                case 10: 
                     System.out.println("\n--- Sorted Patient List ---");
                     ArrayList<Patient> sortedPatients = new ArrayList<>(patients);
                     sortedPatients.sort((p1, p2) -> p1.getName().compareToIgnoreCase(p2.getName()));
@@ -430,11 +430,11 @@ public class PatientManagementSystem {
                     }
                     break;
 
-                case 11: // Save Data
+                case 11: 
                     saveData(patients, doctors, nurses, medicalRecords, appointments, bills);
                     break;
 
-                case 12: // Logout
+                case 12: 
                     System.out.println("Logging out...");
                     break;
 
